@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML formularios</title>
+</head>
+
+<body>
+  <header>
+    <h1>HTML formularios</h1>
+</header>  
+<!-- Los formularios get se usan cuando no hay datos sensibles y facilitan compartir sus URL. Los post se usan cuando hay datos sensibles -->
+<form action="" method="get">
+    <h2>Formulario de búsqueda</h2>
+
+    <input type="search">
+</form>
+<form action="https://getform.io/f/bllgyjvb" method="post">
+    <h2>Formulario regalo de navidad</h2>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" placeholder="Tu nombre" name="nombre" id="nombre">
+        <br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" placeholder="Tus apellidos" name="tus apellidos" id="apellidos">
+        <br>
+        <label for="correoelectronico">Correo electrónico</label>
+        <input type="email" placeholder="hola@dominio.com" name="correoelectronico" id="correoelectronico" required>
+        <br>
+        <label for="fechadenacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fechadenacimiento" id="fechadenacimiento" max="2007-12-17">
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="number" placeholder="Edad" name="edad" id="edad" min="18" value="18">
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" placeholder="+34 000 000 000" name="telefono" id="telefono">
+    </fieldset>
+    <fieldset>
+        <legend>Regalo</legend>
+        <h3>¿Qué tipo de regalo prefieres?</h3>
+        <input type="radio" name="tiporegalo" id="sentimental" value="sentimental">
+        <label for="sentimental">Sentimental</label>
+        <input type="radio" name="tiporegalo" id="material" value="material">
+        <label for="material">Material</label>
+
+        <h3>Juguetes preferidos</h3>
+            <input type="checkbox" id="doll" name="juguetes[]" value="doll">
+            <label for="doll">Muñecas</label>
+            <input type="checkbox" id="camiones" name="juguetes[]" value="camiones">
+            <label for="camiones">Camiones</label>
+            <input type="checkbox" id="bicicleta" name="juguetes[]" value="bicicleta">
+            <label for="bicicleta">Bicicleta</label>
+    </fieldset>
+    <fieldset>
+        <legend>Otros datos</legend>
+      <label for="contraseña">Contraseña</label>
+      <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+    
+        <br>
+        
+        <label for="color">Color </label><input type="color" name="color" id="color">
+        <br>
+       <label for="archivos">Archivos</label>
+        <input type="file" multiple name="archivos" id="archivos">
+    </fieldset>
+    <fieldset>
+        <legend>Más datos</legend>
+        <label for="comments">Comentarios</label>
+        <textarea name="comentarios" id="comments" placeholder="Deja tus comentarios" cols="30"></textarea>
+        <p>¿Que día quieres recibir los regalos?</p>
+            <select name="regalos" id="regalos">
+            <option value="reyes">Reyes</option>
+            <option value="papa_noel" selected>Papá Noel</option>
+            <option value="me_da_igual">Me da igual</option>
+        </select>
+
+    </fieldset>
+    <input type="submit">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petición de servicio</title>
+</head>
+
+<body>
+  <header>
+    <h1>Petición de servicio</h1>
+    <fieldset>
+      <legend>Datos del proyecto</legend>
+   <p>¿Cuál es el objetivo de tu proyecto?</p>
+   <select name="objetivo" id="objetivo">
+    <option value="Diseño gráfico" >Diseño gráfico</option>
+    <option value="Rrss">rrss</option>
+    <option value="branding">Branding</option>
+    <option value="desarrolloweb" selected>Desarrollo Web </option>
+    <option value="impresion3d">Impresión 3D</option>
+   </select>
+   <br>
+<br>
+<p>Público objetivo</p> 
+<!-- Edad -->
+<label for="edad">Rango de edad:</label><br>
+<select id="edad" name="edad">
+  <option value="">Selecciona un rango</option>
+  <option value="0-5">0 – 5</option>
+  <option value="6-10">6 – 10</option>
+  <option value="11-15">11 – 15</option>
+  <option value="16-20">16 – 20</option>
+  <option value="21-25">21 – 25</option>
+  <option value="26-30">26 – 30</option>
+  <option value="31-35">31 – 35</option>
+  <option value="36-40">36 – 40</option>
+  <option value="41-45">41 – 45</option>
+  <option value="46-50">46 – 50</option>
+  <option value="51-55">51 – 55</option>
+  <option value="56-60">56 – 60</option>
+  <option value="61-65">61 – 65</option>
+  <option value="66+">66 o más</option>
+</select>
+
+<br><br>
+
+<!-- Género -->
+<label>Género:</label><br>
+<input type="radio" name="genero" value="femenino"> Femenino<br>
+<input type="radio" name="genero" value="masculino"> Masculino<br>
+<input type="radio" name="genero" value="otro"> Otro / No especifica
+
+<br><br>
+
+<!-- Nivel sociocultural -->
+<label for="nivel">Nivel sociocultural:</label><br>
+<select id="nivel" name="nivel_sociocultural">
+  <option value="">Selecciona una opción</option>
+  <option value="bajo">Bajo</option>
+  <option value="medio">Medio</option>
+  <option value="medio-alto">Medio-alto</option>
+  <option value="alto">Alto</option>
+</select>
+
+<br><br>
+
+<!-- Área geográfica -->
+<label for="area">Área geográfica:</label><br>
+<select id="area" name="area_geografica">
+  <option value="">Selecciona una opción</option>
+  <option value="local">Local</option>
+  <option value="regional">Regional</option>
+  <option value="nacional">Nacional</option>
+  <option value="internacional">Internacional</option>
+</select>
+
+      
+    </fieldset>
+   
+<fieldset>
+  <legend>Contenido y configuración de la web</legend>
+
+  <!-- Secciones de la web -->
+  <label>Secciones que debe tener la web:</label><br>
+  <input type="checkbox" name="secciones[]" value="inicio"> Inicio<br>
+  <input type="checkbox" name="secciones[]" value="servicios"> Servicios<br>
+  <input type="checkbox" name="secciones[]" value="sobre_nosotros"> Sobre nosotros<br>
+  <input type="checkbox" name="secciones[]" value="blog"> Blog<br>
+  <input type="checkbox" name="secciones[]" value="contacto"> Contacto<br>
+  <input type="checkbox" name="secciones[]" value="otros" > Otros
+  <br>
+  <label for="otros"></label><textarea name="otros" placeholder="¿Cúales?"  id="otros"></textarea>
+  <br><br>
+
+  <!-- Diseño de la web -->
+  <label for="diseno">Estilo / diseño deseado:</label><br>
+  <select id="diseno" name="diseno">
+    <option value="">Selecciona un estilo</option>
+    <option value="moderno">Moderno</option>
+    <option value="minimalista">Minimalista</option>
+    <option value="corporativo">Corporativo</option>
+    <option value="creativo">Creativo</option>
+    <option value="otra">Otra</option>
+  </select> <br>
+    <label for="otra"></label><textarea name="diseno" placeholder="Otra,¿Cúal?" id="otra"></textarea>
+    <br><br>
+
+  <label for="referencias">Referencias de diseño (opcional):</label><br>
+  <textarea id="referencias" name="referencias" placeholder="URLs o ejemplos de webs que te gusten"></textarea><br><br>
+
+  <!-- Funcionalidades -->
+  <label>Funcionalidades necesarias:</label><br>
+  <input type="checkbox" name="funcionalidades[]" value="formulario"> Formulario de contacto<br>
+  <input type="checkbox" name="funcionalidades[]" value="blog"> Blog / gestor de contenidos<br>
+  <input type="checkbox" name="funcionalidades[]" value="login"> Área privada / login<br>
+  <input type="checkbox" name="funcionalidades[]" value="ecommerce"> Tienda online / e-commerce<br>
+  <input type="checkbox" name="funcionalidades[]" value="multidioma"> Multidioma
+<br><br>
+
+  <!-- Hosting y dominio -->
+  <label>¿Cuenta con hosting?</label><br>
+  <input type="radio" name="hosting" value="si"> Sí<br>
+  <input type="radio" name="hosting" value="no"> No<br><br>
+  <label>¿Cuenta con dominio?</label><br>
+  <input type="radio" name="hosting" value="si"> Sí<br>
+  <input type="radio" name="hosting" value="no"> No<br>
+
+</fieldset>
+
+    
+    <fieldset>
+      <legend>Contacto</legend>
+      <label for="nombre">Nombre </label>
+      <input type="nombre" name="nombre" placeholder="Nombre">
+      <input type="radio" name="tipopersona" id="particular" value="particular">
+      <label for="particular">Particular</label>
+      <input type="radio" name="tipopersona" id="empresa" value="empresa">
+      <label for="empresa">Empresa</label>
+<br>
+  <label for="correoelectronico">Correo electrónico</label>
+  <input type="email" placeholder="hola@dominio.com" name="correoelectronico" id="correoelectronico" required>
+  <br>
+
+  <label for="telefono">Teléfono:</label>
+  <input type="tel" placeholder="+34 000 000 000" name="telefono" id="telefono">
+    </fieldset>
+    
+</header>  
+</body>
+
+</html>
